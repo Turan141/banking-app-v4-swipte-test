@@ -15,6 +15,8 @@ export const SwipeableScreen = ({
   };
 //@ts-ignore
   const handleTouchMove = (e) => {
+    e.preventDefault();
+
     const currentPosition = e.touches[0].clientY;
     const distance = currentPosition - startPosition;
 
